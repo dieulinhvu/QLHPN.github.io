@@ -28,7 +28,7 @@
       <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3"
-               href="index.html">HỘI VIÊN</a>
+               href="Member.html">HỘI VIÊN</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
                     id="sidebarToggle"
@@ -55,13 +55,14 @@
                         <ul class="dropdown-menu dropdown-menu-end"
                             aria-labelledby="navbarDropdown">
                               <!--<li><a class="dropdown-item" href="#!">Settings</a></li> -->
-                              <li><a class="dropdown-item"
+                              <li><a class="dropdown-item"    data-bs-toggle="modal"
+                                    data-bs-target="#changePassword"
                                        href="#!">Đổi mật khẩu</a></li>
                               <li>
                                     <hr class="dropdown-divider" />
                               </li>
-                              <li><a class="dropdown-item"
-                                       href="#!">Đăng xuất</a></li>
+                              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    href="login.html">Đăng xuất</a></li>
                         </ul>
                   </li>
             </ul>
@@ -74,12 +75,17 @@
                               <div class="nav">
                                     <!-- <div class="sb-sidenav-menu-heading">Core</div> -->
                                     <a class="nav-link nav-item active"
-                                       href="index.html">
+                                       href="Member.html">
                                           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                           QUẢN LÝ HỘI VIÊN
                                     </a>
+                                    <a class="nav-link "
+                                    href="user.html">
+                                     <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                                     QUẢN LÝ TÀI KHOẢN
+                                 </a>
                                     <a class="nav-link"
-                                       href="index.html">
+                                       href="Member.html">
                                           <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                           THÔNG KÊ
                                     </a>
@@ -491,7 +497,7 @@
                         </div>
                         <div class="d-flex justify-content-end">
                               <a class="btn btn-light text-uppercase text-end px-3"
-                                 href="index.html"
+                                 href="Member.html"
                                  type="submit"> Quay lại</a>
 
                         </div>
@@ -510,6 +516,88 @@
                     </div>
                 </footer> -->
             </div>
+
+                 <!-- modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Đăng xuất</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+               Bạn chắc chắn muốn đăng xuất ?
+                </div>
+                <div class="modal-footer">
+                  <a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</a>
+                  <a href="login.html" type="button" class="btn btn-primary">Đăng xuất</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end modal -->
+
+                <!-- Modal  change password-->
+        <div class="modal fade"
+        id="changePassword"
+        tabindex="-1"
+        aria-labelledby="changePasswordlLabel"
+        aria-hidden="true">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title text-uppercase"
+                       id="changePasswordlLabel">
+                       Đổi mật khẩu
+                   </h5>
+                   <button type="button"
+                           class="btn-close"
+                           data-bs-dismiss="modal"
+                           aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                   <div class="row">
+                       <div class="col-md">
+                           <div class="pb-3">
+                               <label class="pb-2">Mật khẩu hiện tại</label>
+                               <div class="form-group pass_show">
+                                   <input type="password"
+                                          value="faisalkhan@123"
+                                          class="form-control"
+                                          placeholder="*******" />
+                               </div>
+                           </div>
+                           <div class="pb-3">
+                               <label class="pb-2">Mật khẩu mới</label>
+                               <div class="form-group pass_show">
+                                   <input type="password"
+                                          class="form-control"
+                                          placeholder="*******" />
+                               </div>
+                           </div>
+                           <div class="pb-3">
+                               <label class="pb-2">Xác nhận mật khẩu</label>
+                               <div class="form-group pass_show">
+                                   <input type="password"
+                                          class="form-control"
+                                          placeholder="*******" />
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="modal-footer">
+                   <a type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal">Đóng</a>
+                   <a type="button"
+                      class="btn btn-primary">Xác nhận</a>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- end modal -->
       </div>
       <script src="https://code.jquery.com/jquery-3.6.0.js"
               integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
